@@ -1,9 +1,11 @@
 // ==UserScript==
 // @name         TWINS Enhanced
 // @namespace    https://twins.tsukuba.ac.jp/
-// @version      1.0
+// @version      1.1.0
 // @description  Browser userscript to improve semantics of TWINS
-// @author       @m_kobayashi_me  https://twitter.com/m_kobayashi_me
+// @author       @mkobayashime
+// @updateURL    https://github.com/mkobayashime/twins-enhanced/raw/master/index.user.js
+// @downloadURL  https://github.com/mkobayashime/twins-enhanced/raw/master/index.user.js
 // @match        https://twins.tsukuba.ac.jp/*
 // @grant        none
 // ==/UserScript==
@@ -39,5 +41,34 @@
 
       originalDiv.appendChild(domA)
     }
+  }
+
+  const setKeijiShortcuts = () => {
+    window.onkeyup = (e) => {
+      if (e.ctrlKey && e.code === "Enter") {
+        const unreadIndicators = document.getElementsByClassName("highlight_red")
+        if (unreadIndicators.length) {
+          const unreadLink = unreadIndicators[0].parentElement.children[0]
+          unreadLink.click()
+        } else {
+          const iframeDoc = document.getElementById("main-frame-if").contentWindow
+            .document
+          if (iframeDoc) {
+            const backBtn = iframeDoc.querySelector(
+              "input[onclick='backPortal();']"
+            )
+            if (backBtn) {
+              backBtn.click()
+            }
+          }
+        }
+      }
+    }
+  }
+
+  const searchParams = new URLSearchParams(window.location.search)
+
+  if (searchParams.get("tabId") === "kj") {
+    setKeijiShortcuts()
   }
 })();
