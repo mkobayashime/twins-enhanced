@@ -1,4 +1,4 @@
-# KdB Enhanced
+# TWINS Enhanced
 
 Browser userscript to improve semantics of [TWINS](https://twins.tsukuba.ac.jp/)
 
