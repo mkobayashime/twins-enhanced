@@ -4,8 +4,6 @@ Browser userscript to improve semantics of [TWINS](https://twins.tsukuba.ac.jp/)
 
 **Mainly for students of University of Tsukuba**
 
-Hosted on [Greasy Fork](https://greasyfork.org/en/scripts/403915-twins-enhanced)
-
 ## How to use
 
 ### Step 1
@@ -25,7 +23,8 @@ It should work in all the managers listed below, but only [Tampermonkey](https:/
 
 ### Step 2
 
-Go to [Greasy Fork](https://greasyfork.org/en/scripts/403915-twins-enhanced). Click the green install button on the page, and your user script manager will ask you to confirm the install.
+Access [the userscript file](https://github.com/mkobayashime/twins-enhanced/raw/master/index.user.js) and the userscript manager (installed in the previous step) will guide you to the installation page automatically.
+
 
 ## License
 
