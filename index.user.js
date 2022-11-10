@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         TWINS Enhanced
 // @namespace    https://twins.tsukuba.ac.jp/
-// @version      1.1.0
+// @version      1.2.0
 // @description  Browser userscript to improve semantics of TWINS
 // @author       @mkobayashime
 // @updateURL    https://github.com/mkobayashime/twins-enhanced/raw/master/index.user.js
@@ -22,6 +22,8 @@
       "tab-kh",
       "tab-en",
       "tab-kj",
+      "tab-pr",
+      "tab-sn",
       "portalsmart",
       "portallocale",
       "portaltimer",
